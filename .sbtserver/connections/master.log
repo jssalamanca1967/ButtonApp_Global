@@ -1,0 +1,7 @@
+New log file opened at Tue Jun 06 20:30:21 COT 2017 by 12808@Johnathan
+Taking next connection to: 59263
+New client attempting to connect on port: 59264-59263
+  Address = /192.168.0.5:59263
+This client on port 59264 has uuid e1d41350-b403-4cdb-9ce7-fc3e50eb85bd configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-e1d41350-b403-4cdb-9ce7-fc3e50eb85bd
+Taking next connection to: 59263

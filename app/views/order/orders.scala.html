@@ -1,0 +1,30 @@
+@(orders: List[Order])
+
+@main{
+    <script>main();</script>
+    <a onclick="closeAllOrders()" class="btn btn-info" role="button">Cancelar todo</a>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <th>Mesa</th>
+                <th>Orden</th>
+                <th>Tiempo</th>
+                <th>Cancelar</th>
+            </thead>
+            <tbody id="tableOrders">
+            @for(order <- orders){
+                <tr id="trtableNumber@order.tableNumber">
+                    <td class="tdtableNumber@order.tableNumber" id="tableNumber@order.tableNumber">@order.tableNumber</td>
+                    <td class="tdtableNumber@order.tableNumber" id="command@order.tableNumber">@order.command</td>
+                    <td class="tdtableNumber@order.tableNumber" id="time@order.tableNumber">00:00:00</td>
+                    <td>
+                        <a href="@routes.OrderController.closeManually(order.tableNumber)">
+                            <img src="https://image.flaticon.com/icons/svg/148/148766.svg" style="width: 20px; height: 20px">
+                        </a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}
